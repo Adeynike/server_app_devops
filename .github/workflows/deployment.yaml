@@ -21,5 +21,6 @@ jobs:
           cache: "npm"
       - name: Install dependencies
         uses: actions/setup-node@v3
+      - run: cd  /home/ubuntu/server_app_devops
       - run: npm install
       - run: pm2 start index.js
