@@ -5,7 +5,7 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: "http://54.210.220.16:3000",
+    origin: "http://54.210.220.16",
   })
 );
 
