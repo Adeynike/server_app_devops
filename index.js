@@ -5,16 +5,16 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "http://54.210.220.16:3000",
   })
 );
 
-const db = mysql.createPool({
+const db = require("mysql").createConnection({
   port: 3306,
-  host: "cloudgen.cqjno1n1tkvw.us-east-1.rds.amazonaws.com",
+  host: "database.cqjno1n1tkvw.us-east-1.rds.amazonaws.com",
   user: "admin",
   password: "password123",
-  database: "cloudgen",
+  database: "database",
   waitForConnections: true,
   connectionLimit: 10,
   maxIdle: 10,
@@ -23,6 +23,18 @@ const db = mysql.createPool({
 });
 
 app.use(express.json());
+
+// connection.connect((err) => {
+//   if (err) return console.error(err.message);
+
+//   console.log("Connected to the MySQL server.");
+// });
+
+// connection.end((err) => {
+//   if (err) return console.error(err.message);
+
+//   console.log("Close the database connection.");
+// });
 
 // db.connect(function(err) {
 //   if (err) {
