@@ -11,10 +11,10 @@ app.use(
 
 const db = require("mysql").createConnection({
   port: 3306,
-  host: "database.cqjno1n1tkvw.us-east-1.rds.amazonaws.com",
+  host: "node-db.cqjno1n1tkvw.us-east-1.rds.amazonaws.com",
   user: "admin",
-  password: "password123",
-  database: "database",
+  password: "admin12345",
+  database: "node-db",
   waitForConnections: true,
   connectionLimit: 10,
   maxIdle: 10,
