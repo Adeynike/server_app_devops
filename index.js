@@ -42,7 +42,7 @@ app.use(express.json());
 //     return;
 //   }
 
-//   console.log('✅  Connected as ID: ' + connection.threadId);
+//   console.log('✅  Connected as ID: ' + connections.threadId);
 // });
 
 app.post("/create", (req, res) => {
